@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/api/behavior.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">lib/api</a> behavior.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>75/75</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>132/132</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>71/71</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">93x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">279x</span>
+<span class="cline-any cline-yes">2697x</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2697x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">93x</span>
+<span class="cline-any cline-yes">93x</span>
+<span class="cline-any cline-yes">93x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">93x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">93x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Map } from 'immutable';
+import {
+    DefaultDraftBlockRenderMap,
+    getDefaultKeyBinding,
+    KeyBindingUtil,
+} from 'draft-js';
+&nbsp;
+import {
+    ENTITY_TYPE,
+    BLOCK_TYPE,
+    INLINE_STYLE,
+    KEY_CODES,
+    KEYBOARD_SHORTCUTS,
+    CUSTOM_STYLE_MAP,
+    INPUT_BLOCK_MAP,
+    INPUT_BLOCK_MAX_LENGTH,
+    INPUT_ENTITY_MAP,
+} from '../api/constants';
+&nbsp;
+const { hasCommandModifier, isOptionKeyCommand } = KeyBindingUtil;
+&nbsp;
+// Hack relying on the internals of Draft.js.
+// See https://github.com/facebook/draft-js/pull/869
+const IS_MAC_OS = isOptionKeyCommand({ altKey: 'test' }) === 'test';
+&nbsp;
+/**
+ * Methods defining the behavior of the editor, depending on its configuration.
+ */
+export default {
+    /**
+     * Configure block render map from block types list.
+     */
+    getBlockRenderMap(blockTypes = []) {
+        const renderMap = {};
+&nbsp;
+        // Override default element for code block.
+        // Fix https://github.com/facebook/draft-js/issues/406.
+        if (blockTypes.some(block =&gt; block.type === BLOCK_TYPE.CODE)) {
+            renderMap[BLOCK_TYPE.CODE] = {
+                element: 'code',
+                wrapper: DefaultDraftBlockRenderMap.get(BLOCK_TYPE.CODE)
+                    .wrapper,
+            };
+        }
+&nbsp;
+        blockTypes.filter(block =&gt; block.element).forEach(block =&gt; {
+            renderMap[block.type] = {
+                element: block.element,
+            };
+        });
+&nbsp;
+        return DefaultDraftBlockRenderMap.merge(Map(renderMap));
+    },
+&nbsp;
+    /**
+     * Configure block style function from block types list.
+     */
+    getBlockStyleFn(blockTypes = []) {
+        const blockClassNames = {};
+&nbsp;
+        blockTypes.filter(block =&gt; block.className).forEach(block =&gt; {
+            blockClassNames[block.type] = block.className;
+        });
+&nbsp;
+        const blockStyleFn = block =&gt; {
+            const type = block.getType();
+&nbsp;
+            return blockClassNames[type] || undefined;
+        };
+&nbsp;
+        return blockStyleFn;
+    },
+&nbsp;
+    /**
+     * Configure key binding function from enabled blocks, styles, entities.
+     */
+    getKeyBindingFn(blockTypes = [], inlineStyles = [], entityTypes = []) {
+        const getEnabledTypes = (activeTypes, allTypes) =&gt; {
+            // Go through all the possible types, and check which are enabled.
+            return Object.keys(allTypes).reduce((enabled, key) =&gt; {
+                enabled[key] = activeTypes.some(
+                    item =&gt; item.type === allTypes[key],
+                );
+&nbsp;
+                return enabled;
+            }, {});
+        };
+&nbsp;
+        const isEnabledBlock = getEnabledTypes(blockTypes, BLOCK_TYPE);
+        const isEnabledInline = getEnabledTypes(inlineStyles, INLINE_STYLE);
+        const isEnabledEntity = getEnabledTypes(entityTypes, ENTITY_TYPE);
+&nbsp;
+        // Emits key commands to use in `handleKeyCommand` in `Editor`.
+        const keyBindingFn = e =&gt; {
+            // Safeguard that we only trigger shortcuts with exact matches.
+            // eg. cmd + shift + b should not trigger bold.
+            if (e.shiftKey) {
+                // Key bindings supported by Draft.js must be explicitely discarded.
+                // See https://github.com/facebook/draft-js/issues/941.
+                switch (e.keyCode) {
+                    case KEY_CODES.B:
+                        return null;
+                    case KEY_CODES.I:
+                        return null;
+                    case KEY_CODES.J:
+                        return null;
+                    case KEY_CODES.U:
+                        return null;
+                    case KEY_CODES.X:
+                        return isEnabledInline.STRIKETHROUGH &amp;&amp;
+                            hasCommandModifier(e)
+                            ? INLINE_STYLE.STRIKETHROUGH
+                            : null;
+                    case KEY_CODES[7]:
+                        return isEnabledBlock.ORDERED_LIST_ITEM &amp;&amp;
+                            hasCommandModifier(e)
+                            ? BLOCK_TYPE.ORDERED_LIST_ITEM
+                            : null;
+                    case KEY_CODES[8]:
+                        return isEnabledBlock.UNORDERED_LIST_ITEM &amp;&amp;
+                            hasCommandModifier(e)
+                            ? BLOCK_TYPE.UNORDERED_LIST_ITEM
+                            : null;
+                    default:
+                }
+            } else {
+                switch (e.keyCode) {
+                    case KEY_CODES.K:
+                        return isEnabledEntity.LINK &amp;&amp; hasCommandModifier(e)
+                            ? ENTITY_TYPE.LINK
+                            : null;
+                    case KEY_CODES.B:
+                        return isEnabledInline.BOLD &amp;&amp; hasCommandModifier(e)
+                            ? INLINE_STYLE.BOLD
+                            : null;
+                    case KEY_CODES.I:
+                        return isEnabledInline.ITALIC &amp;&amp; hasCommandModifier(e)
+                            ? INLINE_STYLE.ITALIC
+                            : null;
+                    case KEY_CODES.J:
+                        return isEnabledInline.CODE &amp;&amp; hasCommandModifier(e)
+                            ? INLINE_STYLE.CODE
+                            : null;
+                    case KEY_CODES.U:
+                        return isEnabledInline.UNDERLINE &amp;&amp;
+                            hasCommandModifier(e)
+                            ? INLINE_STYLE.UNDERLINE
+                            : null;
+                    case KEY_CODES['.']:
+                        return isEnabledInline.SUPERSCRIPT &amp;&amp;
+                            hasCommandModifier(e)
+                            ? INLINE_STYLE.SUPERSCRIPT
+                            : null;
+                    case KEY_CODES[',']:
+                        return isEnabledInline.SUBSCRIPT &amp;&amp;
+                            hasCommandModifier(e)
+                            ? INLINE_STYLE.SUBSCRIPT
+                            : null;
+                    case KEY_CODES[0]:
+                        // Reverting to unstyled block is always available.
+                        return (e.ctrlKey || e.metaKey) &amp;&amp; e.altKey
+                            ? BLOCK_TYPE.UNSTYLED
+                            : null;
+                    case KEY_CODES[1]:
+                        return isEnabledBlock.HEADER_ONE &amp;&amp;
+                            (e.ctrlKey || e.metaKey) &amp;&amp;
+                            e.altKey
+                            ? BLOCK_TYPE.HEADER_ONE
+                            : null;
+                    case KEY_CODES[2]:
+                        return isEnabledBlock.HEADER_TWO &amp;&amp;
+                            (e.ctrlKey || e.metaKey) &amp;&amp;
+                            e.altKey
+                            ? BLOCK_TYPE.HEADER_TWO
+                            : null;
+                    case KEY_CODES[3]:
+                        return isEnabledBlock.HEADER_THREE &amp;&amp;
+                            (e.ctrlKey || e.metaKey) &amp;&amp;
+                            e.altKey
+                            ? BLOCK_TYPE.HEADER_THREE
+                            : null;
+                    case KEY_CODES[4]:
+                        return isEnabledBlock.HEADER_FOUR &amp;&amp;
+                            (e.ctrlKey || e.metaKey) &amp;&amp;
+                            e.altKey
+                            ? BLOCK_TYPE.HEADER_FOUR
+                            : null;
+                    case KEY_CODES[5]:
+                        return isEnabledBlock.HEADER_FIVE &amp;&amp;
+                            (e.ctrlKey || e.metaKey) &amp;&amp;
+                            e.altKey
+                            ? BLOCK_TYPE.HEADER_FIVE
+                            : null;
+                    case KEY_CODES[6]:
+                        return isEnabledBlock.HEADER_SIX &amp;&amp;
+                            (e.ctrlKey || e.metaKey) &amp;&amp;
+                            e.altKey
+                            ? BLOCK_TYPE.HEADER_SIX
+                            : null;
+                    default:
+                }
+            }
+&nbsp;
+            return getDefaultKeyBinding(e);
+        };
+&nbsp;
+        return keyBindingFn;
+    },
+&nbsp;
+    hasKeyboardShortcut(type) {
+        return !!KEYBOARD_SHORTCUTS[type];
+    },
+&nbsp;
+    getKeyboardShortcut(type, isMacOS = IS_MAC_OS) {
+        const shortcut = KEYBOARD_SHORTCUTS[type];
+        const system = isMacOS ? 'macOS' : 'other';
+&nbsp;
+        return shortcut ? shortcut[system] : 'No keyboard shortcut';
+    },
+&nbsp;
+    /**
+     * Defines whether a block should be altered to a new type when
+     * the user types a given mark at the start of it.
+     * This powers the "autolist" feature.
+     *
+     * Returns the new block type, or false if no replacement should occur.
+     */
+    handleBeforeInputBlockType(char, block, blockTypes = []) {
+        const isBlockStart = block.getLength() &lt;= INPUT_BLOCK_MAX_LENGTH - 1;
+&nbsp;
+        if (!isBlockStart) {
+            return false;
+        }
+&nbsp;
+        const mark = `${block.getText()}${char}`;
+        const newType = blockTypes.find(b =&gt; b.type === INPUT_BLOCK_MAP[mark])
+            ? INPUT_BLOCK_MAP[mark]
+            : false;
+&nbsp;
+        return newType;
+    },
+&nbsp;
+    handleBeforeInputHR(char, block) {
+        const isBlockStart =
+            block.getLength() &lt;=
+            INPUT_ENTITY_MAP[ENTITY_TYPE.HORIZONTAL_RULE].length - 1;
+        const mark = `${block.getText()}${char}`;
+&nbsp;
+        return (
+            isBlockStart &amp;&amp;
+            block.getType() !== BLOCK_TYPE.CODE &amp;&amp;
+            mark === INPUT_ENTITY_MAP[ENTITY_TYPE.HORIZONTAL_RULE]
+        );
+    },
+&nbsp;
+    getCustomStyleMap(inlineStyles) {
+        const customStyleMap = {};
+&nbsp;
+        inlineStyles.forEach(style =&gt; {
+            if (style.style) {
+                customStyleMap[style.type] = style.style;
+            } else if (CUSTOM_STYLE_MAP[style.type]) {
+                customStyleMap[style.type] = CUSTOM_STYLE_MAP[style.type];
+            } else {
+                customStyleMap[style.type] = {};
+            }
+        });
+&nbsp;
+        return customStyleMap;
+    },
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 21:28:35 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
